@@ -24,14 +24,14 @@ h1 span{
 }
 
 #photo img{
-    background-color: #000000;
+    background-color: #3f43aa;
     width: 120px;
     height: 120px;
     border-radius: 50%;/* redondea las esquinas del borde exterior de un elemento */
 }
 
 .container{
-    max-width: 800px; /* establece el ancho máximo de un elemento */
+    max-width: 900px; /* establece el ancho máximo de un elemento */
     background: #ffffff;
     margin-top: 80px;
     margin-left: auto;
@@ -64,7 +64,7 @@ h1 span{
 
 .menu ul li ul{
     position: absolute;
-    top: 22px;
+    top: 25px;
     left: 0px;
     list-style-type: none;
     display: none;
@@ -127,9 +127,14 @@ h2::before{
     width: 40%;
 }
 
+.col-80{
+    width: 80%;
+}
+
 .col-90{
     width: 90%;
 }
+
 /* ********** */
 .education ul{
     list-style: none;
@@ -142,8 +147,8 @@ h2::before{
     }
     
     .education .description {
-        background: #ededed;
-        border-bottom: 1px solid #ededed;
+        background: #eeeeee;
+        border-bottom: 1px solid #dddddd;
         padding: 10px;
         margin-bottom: 10px;
         position: relative;
@@ -158,7 +163,7 @@ h2::before{
         content: "";
         position: absolute;
         border: 8px solid transparent;
-        border-right: 8px solid #ededed;
+        border-right: 8px solid #eeeeee;
         top: 5px;
         left: -16px;
     }
@@ -174,54 +179,82 @@ h2::before{
     }
 
     .year{
-        font-size: 0.6em;
+        font-size: 0.8em;
         
     }
 
     .profesion{
         margin-top: 0;
         margin-bottom: 0;
-        margin-left: 3em;
-        font-size: 1em;
+        margin-left: 2em;
+        font-size: 0.9em;
         text-align: justify;
     }
 
     .description{
         margin-top: 0;
-        margin-left: 3em;
+        margin-left: 2em;
         text-align: justify;
     }
 
 
-    .containerskill .pull-left{
-        margin-left: 0;
-        background-color: #ffffff;
-    }
 
-    .skill{
-        list-style-type: none;
-        padding-top: 0;
-        padding-bottom: 0;
-        margin-top: 5px;
-        color: #ffffff;
-    }
+    .skills {
+		list-style-type: none;
+		margin:0;
+		padding: 0;
+	}
+		.skills-item {				
+			color: #FFFFFF;
+			font-weight: bold;
+			text-transform: uppercase;
+			padding: 2px 0 2px 5px;
+			margin-top: 5px;				
+			background: #F0563D;
+			
+		}
+		.skills-item[data-percent="10"] { width: 10% }
+		.skills-item[data-percent="20"] { width: 20% }
+		.skills-item[data-percent="30"] { width: 30% }
+		.skills-item[data-percent="40"] { width: 40% }
+		.skills-item[data-percent="50"] { width: 50% }
+		.skills-item[data-percent="60"] { width: 60% }
+		.skills-item[data-percent="70"] { width: 70% }
+		.skills-item[data-percent="80"] { width: 80% }
+		.skills-item[data-percent="90"] { width: 90% }
 
-    .css{
-        width: 100%;
-        background-color: #e45050;
-    }
+        .icon-start{
+            background: url(../IMG/star-grey.png)no-repeat;
+            width: 110px;
+            height: 14px;
+            float: right;
+        }
 
-    .html{
-        width: 90%;
-        background-color: #3276d6;
-    }
+        .icon-start-red{
+            background: url(../IMG/star-red.png)no-repeat;
+            width: 110px;
+            height: 14px;
+            float: left;
+        }
 
-    .js{
-        width: 80%;
-        background-color: #6be04d;
-    }
+        .obj-start{
+            margin-bottom: 5px;
+            padding-bottom: 5px;
+            border-bottom: 5px;
+        }
 
-    .python{
-        width: 70%;
-        background-color: #d3c41f;
-    }
+        .hobby{
+            background: #ba190a;
+            color: #eeeeee;
+            padding: 8px;
+            font-size: 0.6em;
+        }
+
+        .footer-p{
+            text-align: right;
+            font-size: 0.8em;
+            padding-top: 5px;
+            border-top: 1px solid #ededed;
+            padding-bottom: 0;
+        }
+        

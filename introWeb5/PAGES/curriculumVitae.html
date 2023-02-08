@@ -7,13 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum Vitae :: Josue Antonio Trinidad</title>
     <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 
 <body>
     <div class="container">
-        <header>
+        <header class="row">
             <div id="photo-header">
-                <div id="photo"><img src="../IMG/fotoperfil.png" alt="JosueAt"></div>
+                <div id="photo">
+                    <img src="../IMG/fotoperfil.png" alt="JosueAt">
+                </div>
             </div>
             <h1>Hola mi nombre es <span>Josue Antonio Trinidad</span> y este es mi resumen</h1>
             <nav class="menu">
@@ -108,7 +111,7 @@
 
                     <!-- Experiencia -->
                     <article>
-                        <h2>Experiencia</h2>
+                        <h2 class="col-60">Experiencia</h2>
                         <div class="job clearfix">
                             <div class="pull-left col-10">
                                 <div class="where">Google</div>
@@ -137,37 +140,65 @@
                                     quia
                                     laudantium nisi vitae impedit dolorem. Pariatur cupiditate sint officiis?</p>
                             </div>
-                        </div>
+                            <!-- </div> -->
                     </article>
                 </div>
             </div>
 
-            <!-- Contacto -->
-                <h2>Contacto</h2>
+            <div class="col-40 pull-left">
+                <div class="row">
+                    <!-- Contacto -->
+                    <h2>Contacto</h2>
                     <ul>
                         <li><strong>Email:</strong>josue25971@gmail.com</li>
                         <li><strong>Skype:</strong> JosueAT1</li>
                         <li><strong>Twitter:</strong>@JosueAT1</li>
                         <li><strong>Facebook:</strong>/JosueAT1</li>
                     </ul>
-                <!-- SKILLS -->
-                <article class="containerskill">
-                    <div class="pull-left col-40">
-                        <h2>Skills</h2>
-                        <ul>
-                            <li class="skill css">css</li>
-                            <li class="skill html">html</li>
-                            <li class="skill js">js</li>
-                            <li class="skill python">python</li>
-                        </ul>  
+                    <!-- SKILLS -->
+                    <h2>Skills</h2>
+                    <ul class="skills">
+                        <li class="skills-item" data-percent="90">Java</li>
+                        <li class="skills-item" data-percent="80">Html</li>
+                        <li class="skills-item" data-percent="60">Css</li>
+                        <li class="skills-item" data-percent="40">Js</li>
+                        <li class="skills-item" data-percent="20">python</li>
+                    </ul>
+
+                    <h2>Idiomas</h2>
+                    <div>
+                        <div>Ingles
+                            <div class="icon-start">
+                                <div class="icon-start-red" style="width: 50%;"></div>
+                            </div>
+                        </div>
+
+                        <div>Español
+                            <div class="icon-start">
+                                <div class="icon-start-red" style="width: 60%"></div>
+                            </div>
+                        </div>
                     </div>
-                </article>       
+                    <h2>hobbies</h2>
+                    <span class="hobby"> <i class="fa fa-heartbeat"></i> Deporte</span>
+                    <span class="hobby"> <i class="fa fa-camera-retro"></i>  Fotografia</span>
+                    <span class="hobby"> <i class="fab fa-napster"></i> Musica</span>
+                </div>
+            </div>
+
         </section>
         <footer>
+
+            <div class="row clearfix">
+                <div class="footer-p col-20">
+                    <p>
+                        Desarrollador Front-End, Generation 2023
+                    </p>
+                </div>
+            </div>
 
         </footer>
     </div>
 </body>
 
 </html>
-
