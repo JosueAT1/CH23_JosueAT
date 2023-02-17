@@ -30,16 +30,16 @@ Metodos tradicionales (que se usan en versiones antiguas de JS)
 
 */
 
-var elementoID = document.getElementById("botonSuma");
-console.log(elementoID);
+//var elementoID = document.getElementById("botonSuma");
+//console.log(elementoID);
 
-var elementoEtiqueta = document.getElementsByTagName("button");
-console.log(elementoEtiqueta);
+//var elementoEtiqueta = document.getElementsByTagName("button");
+//console.log(elementoEtiqueta);
 
-console.log("Este es el primer elemento de mi coleccion de botones", elementoEtiqueta);
+//console.log("Este es el primer elemento de mi coleccion de botones", elementoEtiqueta);
 
-var elementoClassName = document.getElementsByClassName("botones");
-console.log(elementoClassName);
+//var elementoClassName = document.getElementsByClassName("botones");
+//console.log(elementoClassName);
 
 
 /* 
@@ -57,17 +57,6 @@ Metodos recientes
 //var variosElementos = document.querySelector(".botones");
 //console.log("variosElementos");
 
-
-/* Construcccion de nuestra calculadora */
-var input = document.getElementById("input1");
-var input = document.getElementById("input2");
-
-var botonSuma = document.getElementById("botonSuma");
-var botonSuma = document.getElementById("botonResta");
-var botonSuma = document.getElementById("botonMulti");
-var botonSuma = document.getElementById("botonDiv");
-
-var resultado = document.getElementById("resultado");
 
 /* 
 
@@ -98,6 +87,108 @@ Actualizar nodos
 
 */
 
-var resultadoQueCambia = document.getElementById("resultado");
+//var resultadoQueCambia = document.getElementById("resultado");
 
-resultadoQueCambia.innerHTML = "Saludos, cambie el texto juas juas"
+//resultadoQueCambia.innerHTML = "Saludos, cambie el texto juas juas"
+
+
+
+/* Construcccion de nuestra calculadora */
+var input1 = document.getElementById("input1");
+var input2 = document.getElementById("input2");
+
+var botonSuma = document.getElementById("botonSuma");
+var botonResta = document.getElementById("botonResta");
+var botonMulti = document.getElementById("botonMulti");
+var botonDiv = document.getElementById("botonDiv");
+
+var resultado = document.getElementById("resultado");
+
+//Construimos las funciones de nuestra calculadora
+
+function suma(){
+    let valor1 = parseInt(input1.value); //Pido numero1
+    let valor2 = parseInt(input2.value); //Pido numero2
+    let suma = valor1 + valor2; //Calculo la suma
+    resultado.innerHTML = suma; //Pongo el resultado en su lugar
+}
+
+function resta(){
+    let valor1 = parseInt(input1.value); //Pido numero1
+    let valor2 = parseInt(input2.value); //Pido numero2
+    let resta = valor1 - valor2; //Calculo la resta
+    resultado.innerHTML = resta; //Pongo el resultado en su lugar
+}
+
+function multi(){
+    let valor1 = parseInt(input1.value); //Pido numero1
+    let valor2 = parseInt(input2.value); //Pido numero2
+    let multi = valor1 * valor2; //Calculo la multiplicacion
+    resultado.innerHTML = multi; //Pongo el resultado en su lugar
+}
+
+function div(){
+    let valor1 = parseInt(input1.value); //Pido numero1
+    let valor2 = parseInt(input2.value); //Pido numero2
+    let div = valor1 / valor2; //Calculo la division
+    resultado.innerHTML = div; //Pongo el resultado en su lugar
+}
+
+/*Como se crea un evento (addEventListener)
+
+    - node.addEventListener ("evento a escuchar", lo que quiero que haga cuando se escuche)
+
+            - node (nodo donde aterrizo el evento)
+            - addEventListener (palabra reservada para usar el evento)
+            - evento a escribir ( clicl, mouseover, etc)
+            - lo que quiero que haga (la llamada de la funcion)
+
+*/
+
+botonSuma.addEventListener("click", suma);
+botonResta.addEventListener("click", resta);
+botonMulti.addEventListener("click", multi);
+botonDiv.addEventListener("click", div);
+
+
+/* 
+
+Manipulacion del DOM
+
+    - Metodos para acceder a elementos
+
+        - document.getElementById
+        - document.getElementByTagName
+        - document.getElementByClassName
+
+
+    - Metodo para crear elementos
+
+        - document.createElement(etiqueta)
+        - document.createTextNode(texto)   -  Investigar
+
+
+    - Metodo para insertar elementos
+
+        - parentElement.append
+        - parentElement.insertBefore
+        - parentElement.insetAdjacentElement
+
+
+    - Metodos para modificar elementos
+
+        - node.outerHTML (Leer o referenciar el elemento)
+        - node.innertHTML (modificar el elemento)
+
+
+
+*/
+
+
+//Primer paso: Definir con que voy a interactuar (almaceno en una variable)
+//const textoAModificar = document.querySelector("#h1")
+
+//Creo una funcion que cambia de color, segun el color que le paso como parametro
+//function cambiarColor(color){
+    //textoAModificar.style.color = color;
+//}
