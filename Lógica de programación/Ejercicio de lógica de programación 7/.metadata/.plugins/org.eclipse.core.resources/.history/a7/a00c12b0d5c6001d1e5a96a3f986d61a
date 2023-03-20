@@ -1,0 +1,10 @@
+package conteo;
+
+public class FinDeSemana {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

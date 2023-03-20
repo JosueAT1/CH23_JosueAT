@@ -1,0 +1,10 @@
+package logica9.jat;
+
+public class DiccionarioESEN {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

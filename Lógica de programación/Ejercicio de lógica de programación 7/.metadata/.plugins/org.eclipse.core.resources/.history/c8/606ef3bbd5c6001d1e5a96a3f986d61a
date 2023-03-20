@@ -1,0 +1,77 @@
+package conteo;
+
+import java.util.Scanner;
+
+public class FinDeSemana {
+
+	public static void main(String[] args) {
+	        Scanner input = new Scanner(System.in);
+	        
+	        
+	        final int MINUTOS_EN_DIA = 1440;
+	        final int MINUTOS_EN_HORA = 60;
+	        
+	        
+	        String diaSemana = "";
+	        int hora = 0;
+	        int minutos = 0;
+	        
+	        
+	        while (diaSemana.isEmpty()) {
+	            System.out.print("Ingrese un día de la semana (lunes, martes, miércoles, jueves o viernes): ");
+	            String dia = input.nextLine();
+	            
+	            switch (dia.toLowerCase()) {
+	                case "lunes":
+	                case "martes":
+	                case "miércoles":
+	                case "jueves":
+	                case "viernes":
+	                    diaSemana = dia.toLowerCase();
+	                    break;
+	                default:
+	                    System.out.println("El día de la semana ingresado no es válido. Por favor, intente de nuevo.");
+	            }
+	        }
+	        
+	       
+	        while (hora < 0 || hora > 23 || minutos < 0 || minutos > 59) {
+	            System.out.print("Ingrese la hora (formato 24 horas): ");
+	            hora = input.nextInt();
+	            System.out.print("Ingrese los minutos: ");
+	            minutos = input.nextInt();
+	            
+	            if (hora < 0 || hora > 23 || minutos < 0 || minutos > 59) {
+	                System.out.println("La hora y los minutos ingresados no son válidos. Por favor, intente de nuevo.");
+	            }
+	        }
+	        
+	      
+	        int minutosFaltantes = 0;
+	        switch (diaSemana) {
+	            case "lunes":
+	            case "martes":
+	            case "miércoles":
+	            case "jueves":
+	                minutosFaltantes = (4 - getNumeroDiaSemana(diaSemana)) * MINUTOS_EN_DIA + (15 - hora) * MINUTOS_EN_HORA - minutos;
+	                break;
+	            case "viernes":
+	                if (hora < 15) {
+	                    minutosFaltantes = (15 - hora) * MINUTOS_EN_HORA - minutos;
+	                } else {
+	                    minutosFaltantes = (2 * MINUTOS_EN_DIA) - ((hora - 15) * MINUTOS_EN_HORA + minutos);
+	                }
+	                break;
+	        }
+	        
+	        // Mostrar el resultado por consola
+	        if (minutosFaltantes > 0) {
+	            System.out.println("Faltan " + minutosFaltantes + " minutos para el fin de semana.");
+	        } else {
+	            System.out.println("El fin de semana ya ha comenzado.");
+	        }
+
+	}
+	
+	public static int getNumeroDiaSemana(String diaSemana)
+}

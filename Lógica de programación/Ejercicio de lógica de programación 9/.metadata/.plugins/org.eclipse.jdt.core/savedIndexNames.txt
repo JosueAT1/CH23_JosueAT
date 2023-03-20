@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Lógica de programación\Ejercicio de lógica de programación 9\.metadata\.plugins\org.eclipse.jdt.core
+1530155246.index
+3595638461.index
+1865797976.index
