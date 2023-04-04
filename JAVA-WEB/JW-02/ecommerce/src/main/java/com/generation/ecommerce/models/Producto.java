@@ -20,7 +20,7 @@ public class Producto {
 	private String nombre;
 	private String descripcion;
 	private String URL_Imagen;
-	private double precio;
+	private Double precio;
 	
 	//Constructor vacio para el Jackson (seriealizar y deserealizar un objeto JAVA a JSON)
 	public Producto() {
@@ -67,7 +67,7 @@ public class Producto {
 	}
 
 	public void setURL_Imagen(String uRL_Imagen) {
-		URL_Imagen = uRL_Imagen;
+		this.URL_Imagen = uRL_Imagen;
 	}
 
 	public double getPrecio() {
